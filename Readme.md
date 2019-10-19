@@ -1,7 +1,7 @@
 # Учебный проект «Угадай мелодию» [![Build status][travis-image]][travis-url]
 
 * Студент: [Dmitry Svistun](https://up.htmlacademy.ru/react/2/user/625035).
-* Наставник: `Неизвестно`.
+* Наставник: `Богдан Волик`.
 
 ---
 
