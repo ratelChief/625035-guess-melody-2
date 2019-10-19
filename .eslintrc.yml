@@ -1,15 +1,15 @@
 env:
   es6: true
   browser: true
-  commonjs: true //узнать
+  commonjs: true
 
 extends: ['htmlacademy/es6', 'plugin:react/recommended']
 
 parserOptions:
   ecmaFeatures:
-    jsx:true
+    jsx: true
   ecmaVersion: 6
-  sourceType: module //узнать
+  sourceType: module
 
 plugins: ['react']
 
