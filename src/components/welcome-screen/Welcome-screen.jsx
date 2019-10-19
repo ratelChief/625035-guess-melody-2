@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const WelcomeScreen = () => {
+export const WelcomeScreen = (props) => {
+  const {gameTime, possibleErrors} = props;
 
   return (
     <section className="welcome">
@@ -11,8 +13,8 @@ export const WelcomeScreen = () => {
       <h2 className="welcome__rules-title">Правила игры</h2>
       <p className="welcome__text">Правила просты:</p>
       <ul className="welcome__rules-list">
-        <li>За 5 минут нужно ответить на все вопросы.</li>
-        <li>Можно допустить 3 ошибки.</li>
+        <li>За {gameTime} минут нужно ответить на все вопросы.</li>
+        <li>Можно допустить {possibleErrors} ошибки.</li>
       </ul>
       <p className="welcome__text">Удачи!</p>
     </section>
@@ -20,3 +22,8 @@ export const WelcomeScreen = () => {
 };
 
 export default WelcomeScreen;
+
+WelcomeScreen.propTypes = {
+  gameTime: PropTypes.number.isRequired,
+  possibleErrors: PropTypes.number.isRequired
+};
