@@ -1,7 +1,7 @@
 import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import {shallow} from 'enzyme';
 import WelcomeScreen from './Welcome-screen';
+import "../../../setupTests";
 
 describe(`WelcomeScreen`, () => {
   it(`Should be clicked once`, () => {
@@ -15,9 +15,9 @@ describe(`WelcomeScreen`, () => {
         />
     );
 
-    const welcomeBtn = welcomeScreen.find(`welcome__button`);
+    const welcomeBtn = welcomeScreen.find(`button`);
     welcomeBtn.simulate(`click`);
-    clickHandler.toHaveBeenCalledTimes(1);
+    expect(clickHandler).toHaveBeenCalledTimes(1);
 
   });
 });
