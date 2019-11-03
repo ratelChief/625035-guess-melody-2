@@ -7,8 +7,8 @@ it(`App to be rendered correctly`, () => {
 
   const app = renderer.create(
       <App
-        gameTime={settings.gameTime}
-        possibleErrors={settings.possibleErrors}
+        gameSettings={settings}
+        questions={[]}
       />
   );
 

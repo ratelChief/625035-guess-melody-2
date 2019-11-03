@@ -16,6 +16,7 @@ exports[`Welcome-screen to be rendered correctly 1`] = `
   </div>
   <button
     className="welcome__button"
+    onClick={[MockFunction]}
   >
     <span
       className="visually-hidden"
@@ -38,12 +39,12 @@ exports[`Welcome-screen to be rendered correctly 1`] = `
   >
     <li>
       За 
-      5
+      0
        минут нужно ответить на все вопросы.
     </li>
     <li>
       Можно допустить 
-      2
+      0
        ошибки.
     </li>
   </ul>

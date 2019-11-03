@@ -5,19 +5,19 @@ import "../../../setupTests";
 
 describe(`WelcomeScreen`, () => {
   it(`Should be clicked once`, () => {
-    const clickHandler = jest.fn();
+    const cb = jest.fn();
 
     const welcomeScreen = shallow(
         <WelcomeScreen
-          gameTime={0}
+          time={0}
           possibleErrors={0}
-          onClick={clickHandler}
+          onStartButtonClick={cb}
         />
     );
 
     const welcomeBtn = welcomeScreen.find(`button`);
     welcomeBtn.simulate(`click`);
-    expect(clickHandler).toHaveBeenCalledTimes(1);
+    expect(cb).toHaveBeenCalledTimes(1);
 
   });
 });

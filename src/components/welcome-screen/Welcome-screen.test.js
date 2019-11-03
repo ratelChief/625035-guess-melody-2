@@ -3,12 +3,13 @@ import renderer from "react-test-renderer";
 import WelcomeScreen from "./Welcome-screen";
 
 it(`Welcome-screen to be rendered correctly`, () => {
-  const settings = {gameTime: 5, possibleErrors: 2};
+  const onStartButtonClick = jest.fn();
 
   const welcomeScreen = renderer.create(
       <WelcomeScreen
-        gameTime={settings.gameTime}
-        possibleErrors={settings.possibleErrors}
+        time={0}
+        possibleErrors={0}
+        onStartButtonClick={onStartButtonClick}
       />
   ).toJSON();
 
